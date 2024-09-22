@@ -1,4 +1,5 @@
 import React from 'react';
+
 import WeatherCard from './components/WeatherCard';
 import TemperatureChart from './components/TemperatureChart';
 import WeeklyForecast from './components/WeeklyForecast';
@@ -15,19 +16,13 @@ const App = () => {
     <div className="app">
       <Sidebar />
       <div className="main-content">
-        <WeatherCard />
-        <div className="temperature-and-alerts">
-          <TemperatureChart />
-          <WeatherAlert />
-        </div>
-        <div className="weekly-and-precipitation">
-          <WeeklyForecast />
-          <PrecipitationLevel />
-        </div>
-        <div className="sun-and-wind">
-          <SunTimings />
-          <WindInfo />
-        </div>
+        {/* <WeatherCard />
+        <TemperatureChart />
+        <WeatherAlert />
+        <WeeklyForecast />
+        <PrecipitationLevel />
+        <SunTimings />
+        <WindInfo /> */}
       </div>
     </div>
   );
