@@ -55,3 +55,134 @@
         }
     }
 }
+
+.main-content {
+    grid-area: auto / span 11;
+    display: grid;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .search-bar {
+        background-color: var(--light-blue);
+        color: var(--blue);
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        padding: 17px 50px;
+        &::placeholder {
+            color: var(--blue);
+        }
+    }
+}
+
+.bento {
+    display: grid;
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);
+    gap: 20px;
+    .weather-card {
+        grid-area: 1 / 1 / 14 / 14;
+    }
+    .temperature-chart {
+        grid-area: 1 / 14 / 14 / 33;
+    }
+    .weekly-forecast {
+        grid-area: 14 / 1 / 23 / 19;
+    }
+    .sun-timings {
+        grid-area: 14 / 19 / 23 / 25;
+    }
+    .wind-info {
+        grid-area: 14 / 25 / 33 / 33;
+    }
+    .precipitation-level {
+        grid-area: 23 / 1 / 33 / 14;
+    }
+    .weather-alert {
+        grid-area: 23 / 14 / 33 / 25;
+    }
+}
+
+.weather-card, .temperature-chart, .weekly-forecast, .sun-timings, .wind-info, .precipitation-level, .weather-alert {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weather-card {
+    padding: 20px;
+    .head {
+        display: flex;
+        justify-content: space-between;
+        .day {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: var(--gray);
+            font-weight: 600;
+        }
+        .location {
+            font-size: 14px;
+            color: var(--white);
+            background-color: var(--blue);
+            display: flex;
+            height: fit-content;
+            padding: 8px 16px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            gap: 12px;
+            .icon {
+                width: 12px;
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .weather {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-left: 40px;
+            .icon {
+                width: 105%;
+            }
+            .description {
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--gray);
+            }
+        }
+        .temperature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            .value {
+                font-size: 64px;
+                font-weight: 600;
+                color: var(--orange);
+            }
+            .infos {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--gray);
+            }
+        }
+    }
+}

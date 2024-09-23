@@ -8,6 +8,7 @@ import SunTimings from './components/SunTimings';
 import WeatherAlert from './components/WeatherAlert';
 import WindInfo from './components/WindInfo';
 import Sidebar from './components/Sidebar';
+import Header from './components/Header';
 
 import './App.css';
 
@@ -16,13 +17,16 @@ const App = () => {
     <div className="app">
       <Sidebar />
       <div className="main-content">
-        {/* <WeatherCard />
-        <TemperatureChart />
-        <WeatherAlert />
-        <WeeklyForecast />
-        <PrecipitationLevel />
-        <SunTimings />
-        <WindInfo /> */}
+        {/* <Header /> */}
+        <div className="bento">
+          <WeatherCard />
+          <TemperatureChart />
+          <WeeklyForecast />
+          <SunTimings />
+          <WindInfo />
+          <WeatherAlert />
+          <PrecipitationLevel />
+        </div>
       </div>
     </div>
   );
