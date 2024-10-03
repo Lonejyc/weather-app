@@ -17,7 +17,7 @@ const App = () => {
     <div className="app">
       <Sidebar />
       <div className="main-content">
-        {/* <Header /> */}
+        <Header />
         <div className="bento">
           <WeatherCard />
           <TemperatureChart />
