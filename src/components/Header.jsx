@@ -1,17 +1,24 @@
-import React from 'react'
-import search from '../assets/images/Search.svg'
+import React, { useState } from 'react'
 import ThemeSwitcher from './ThemeSwitcher'
+import Searchbar from './Searchbar'
 
-const Header = () => {
+const Header = ({ onSearch }) => {
+
+  const [location, setLocation] = useState('');
+  
+  const handleSearch = (location) => {
+    setLocation(location);
+    onSearch(location);
+    // console.log(location);
+  }
   return (
-    <header class="header">
+    <header className="header">
         <div className="left">
             <h1>Suivi Météo</h1>
             <p><span>Vendredi 20 septembre 2024</span></p>
         </div>
         <div className="mid">
-            <img src={search} alt="search icon" className="icon" />
-            <input type="search" className="search-bar" placeholder="Rechercher une ville" />
+            <Searchbar onSearch={handleSearch} />
         </div>
         <div className="right">
             <ThemeSwitcher />

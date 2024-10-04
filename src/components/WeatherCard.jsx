@@ -2,13 +2,20 @@ import React from 'react';
 import suncloud from '../assets/images/Sun-cloud.svg';
 import location from '../assets/images/location.svg';
 
-function WeatherCard() {
+const WeatherCard = () => {
+  const date = new Date();
+  const day = date.toLocaleDateString('fr-FR', { weekday: 'long' });
+  const month = date.toLocaleDateString('fr-FR', { month: 'long' });
+  const dayNumber = date.getDate();
+  const year = date.getFullYear();
+  const today = `${dayNumber} ${month} ${year}`;
+
   return (
     <div className="weather-card">
       <div className="head">
         <div className="day">
-          <h2>Vendredi</h2>
-          <p className='subtitle'>20 septembre 2024</p>
+          <h2>{day}</h2>
+          <p className='subtitle'>{today}</p>
         </div>
         <div className="location">
           <img src={location} alt="location icon" className='icon' />
