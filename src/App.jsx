@@ -38,7 +38,7 @@ const App = () => {
           <TemperatureChart />
           <WeeklyForecast />
           <SunTimings data={data}/>
-          <WindInfo />
+          <WindInfo data={data} />
           <WeatherAlert />
           <PrecipitationLevel />
         </div>

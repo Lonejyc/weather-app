@@ -153,10 +153,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .weather-card {
-    padding: 20px;
     .head {
         display: flex;
         justify-content: space-between;
@@ -233,7 +233,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
     .sunrise, .sunset {
         display: flex;
         justify-content: space-between;
@@ -260,5 +259,30 @@
                 color: var(--blue);
             }
         }
+    }
+}
+
+.wind-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .moy, .max {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .icon {
+        margin-bottom: 15px;
+    }
+    .name {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--black);
+    }
+    .content {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--gray);
     }
 }
