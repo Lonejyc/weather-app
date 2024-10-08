@@ -39,11 +39,16 @@ const WeatherCard = ({ data }) => {
     case "03n": weatherImage = Cloud; break;
     case "04d":
     case "04n": weatherImage = DoubleCloud; break;
-    case "09d": weatherImage = Rain; break;
-    case "10d": weatherImage = Rainy; break;
-    case "11d": weatherImage = Thunder; break;
-    case "13d": weatherImage = Snow; break;
-    case "50d": weatherImage = Mist; break;
+    case "09d":
+    case "09n": weatherImage = Rain; break;
+    case "10d":
+    case "10n": weatherImage = Rainy; break;
+    case "11d":
+    case "11n": weatherImage = Thunder; break;
+    case "13d":
+    case "13n": weatherImage = Snow; break;
+    case "50d":
+    case "50n": weatherImage = Mist; break;
     default: weatherImage = SunCloud;
   }
 
