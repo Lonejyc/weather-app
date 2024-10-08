@@ -228,3 +228,37 @@
         }
     }
 }
+
+.sun-timings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    .sunrise, .sunset {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--light-white);
+        border-radius: 5px;
+        padding: 10px 20px;
+        .icon {
+            width: 36px;
+            height: 36px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            .text {
+                font-size: 12px;
+                font-weight: 600;
+                color: var(--black);
+            }
+            .time {
+                font-size: 24px;
+                font-weight: 600;
+                color: var(--blue);
+            }
+        }
+    }
+}

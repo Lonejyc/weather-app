@@ -37,7 +37,7 @@ const App = () => {
           <WeatherCard data={data}/>
           <TemperatureChart />
           <WeeklyForecast />
-          <SunTimings />
+          <SunTimings data={data}/>
           <WindInfo />
           <WeatherAlert />
           <PrecipitationLevel />
