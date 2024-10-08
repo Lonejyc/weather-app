@@ -17,8 +17,8 @@ const App = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
 
-  const apiKey = process.env.API_KEY;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&lang=fr&units=metric`;
 
   const searchLocation = (location) => {
     setLocation(location);
@@ -34,7 +34,7 @@ const App = () => {
       <div className="main-content">
         <Header onSearch={searchLocation} />
         <div className="bento">
-          <WeatherCard />
+          <WeatherCard data={data}/>
           <TemperatureChart />
           <WeeklyForecast />
           <SunTimings />
