@@ -28,7 +28,7 @@ const WeatherCard = ({ data }) => {
   const tempHigh = data.main ? `${Math.round(data.main.temp_max)}°` : '29°';
   const tempLow = data.main ? `${Math.round(data.main.temp_min)}°` : '15°';
 
-  const weatherIcon = data.weather ? data.weather[0].icon : "10n";
+  const weatherIcon = data.weather ? data.weather[0].icon : "02d";
   let weatherImage;
   switch (weatherIcon) {
     case "01d": weatherImage = Sun; break;

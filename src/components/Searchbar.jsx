@@ -8,7 +8,6 @@ const Searchbar = ({ onSearch }) => {
     const searchLocation = (e) => {
         if (e.key === 'Enter') {
             onSearch(location);
-            // console.log(location);
             setLocation('');
         }
     };
