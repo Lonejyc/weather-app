@@ -61,7 +61,7 @@ const App = () => {
           <SunTimings data={data}/>
           <WindInfo data={data} />
           <WeatherAlert />
-          <PrecipitationLevel />
+          <PrecipitationLevel data={forecastData} />
         </div>
       </div>
     </div>
