@@ -56,11 +56,11 @@ const App = () => {
         <Header onSearch={searchLocation} />
         <div className="bento">
           <WeatherCard data={data}/>
-          <TemperatureChart />
+          <TemperatureChart data={forecastData} />
           <WeeklyForecast data={forecastData} />
           <SunTimings data={data}/>
           <WindInfo data={data} />
-          <WeatherAlert />
+          <WeatherAlert data={forecastData} />
           <PrecipitationLevel data={forecastData} />
         </div>
       </div>

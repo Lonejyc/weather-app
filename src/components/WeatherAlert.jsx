@@ -1,10 +1,10 @@
 import React from 'react';
 
-function WeatherAlert() {
+const WeatherAlert = () => {
   return (
     <div className="weather-alert">
       <h3>Alerte météo</h3>
-      {/* Afficher les alertes ici */}
+      <p className='alert'>Aucune alerte</p>
     </div>
   );
 }

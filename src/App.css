@@ -259,6 +259,9 @@
                 color: var(--blue);
             }
         }
+        &:hover {
+            background-color: var(--light-blue);
+        }
     }
 }
 
@@ -320,7 +323,7 @@
     .bar {
         position: relative;
         width: 20px;
-        height: 130px;
+        height: 10vw;
         background-color: #f0f0f0;
         margin: 0 10px;
     }
@@ -347,5 +350,39 @@
     .day-label {
         margin-top: 10px;
         font-weight: bold;
+    }
+}
+
+.weather-alert .alert {
+    text-align: center;
+}
+
+.weekly-forecast {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+        .day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 190px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--light-white);
+            .day-name, .temperature {
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--black);
+                text-transform: capitalize;
+            }
+            .icon {
+                width: 40px;
+            }
+            &:hover {
+                background-color: var(--light-blue);
+            }
+        }
     }
 }
