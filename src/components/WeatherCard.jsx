@@ -12,7 +12,7 @@ import Sun from '../assets/images/Sun.svg';
 import Thunder from '../assets/images/Thunder.svg';
 import Mist from '../assets/images/Mist.svg';
 
-import location from '../assets/images/location.svg';
+import location from '../assets/images/Location.svg';
 
 const WeatherCard = ({ data }) => {
   const date = new Date();
